@@ -11,7 +11,7 @@ import scalariform.formatter.preferences.FormattingPreferences
 
 object ProjectAutoPlugin extends AutoPlugin {
   final val ScalaVersion = "2.13.0"
-  final val AkkaVersion = "2.6.0"
+  final val AkkaVersion = "2.6.1"
   final val SlickVersion = "3.3.2"
   final val ScalaTestVersion = "3.0.8"
 
@@ -102,7 +102,7 @@ object ProjectAutoPlugin extends AutoPlugin {
 
   def determineMimaPreviousArtifacts(scalaBinVersion: String): Set[ModuleID] = {
     val compatVersions: Set[String] =
-      if (scalaBinVersion.startsWith("2.13")) Set("3.5.2")
+      if (scalaBinVersion.startsWith("2.13")) Set("3.5.3")
       else {
         Set("3.5.0", "3.5.1", "3.5.2")
       }
